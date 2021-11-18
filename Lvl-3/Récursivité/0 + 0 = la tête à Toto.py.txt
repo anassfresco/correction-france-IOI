@@ -1,0 +1,10 @@
+def crochet (n,i=1):
+    if n==0:
+        return 0
+    if i>n-1:
+        return ("(0 + 0)")
+    else:
+        return ("("+crochet(n,i+1)+" + "+crochet(n,i+1)+")")
+number=int(input())
+
+print("0 =",crochet(number))

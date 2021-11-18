@@ -1,0 +1,18 @@
+def ab(a, b):
+    if a  >= b:
+
+
+        return b
+
+
+    else:
+        print(a, end=" ")
+        return ab(a+1,b)
+
+
+
+
+
+
+a, b = map(int, input().split( ))
+print(ab(a, b))

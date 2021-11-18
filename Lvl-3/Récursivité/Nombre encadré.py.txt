@@ -1,0 +1,8 @@
+def crochet(a,b,i=1):
+    if i>b:
+        return a
+    else:
+        i=i+1
+        return [crochet(a,b,i)]
+a,b=map(int,input().split())
+print(crochet(a,b))
