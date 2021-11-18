@@ -1,0 +1,4 @@
+import sys
+i=int(input())
+k = sorted(list(map(int, sys.stdin.readline().split())))
+print(" ".join(map(str,k)))

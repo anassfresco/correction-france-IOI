@@ -1,0 +1,5 @@
+import sys
+i,b=map(int,input().split())
+valeurs = sorted(list(map(int, sys.stdin.readline().split())))
+for i in range(1,b+1):
+    print(valeurs[-i],end=" ")

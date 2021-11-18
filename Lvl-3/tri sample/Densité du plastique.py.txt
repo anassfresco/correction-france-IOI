@@ -1,0 +1,32 @@
+import sys
+ 
+valeurs = []
+ 
+def cherche(cible, posGauche, posDroite):
+   global valeurs
+   if posGauche == posDroite:
+      return cible == valeurs[posGauche]
+   posMilieu = (posGauche + posDroite) // 2
+   if cible <= valeurs[posMilieu]:
+      return cherche(cible, posGauche, posMilieu)
+   else:
+      return cherche(cible, posMilieu+1, posDroite)
+ 
+ 
+def main():
+   global valeurs
+   nbValeurs = int(input())
+   valeurs = list(map(int, input().split()))
+  
+   valeurs.sort()
+   
+   nbRequetes = int(input())
+   for _ in range(nbRequetes):
+      cible = int(sys.stdin.readline())
+      if cherche(cible, 0, nbValeurs-1):
+         print(1)
+      else:
+         print(0)
+         
+main()
+   

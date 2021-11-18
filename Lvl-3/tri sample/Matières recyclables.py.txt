@@ -1,0 +1,8 @@
+a=[]
+i=int(input())
+for j in range(i):
+    c=input()
+    a.append(c)
+for i in sorted(a):
+    print(i)
+

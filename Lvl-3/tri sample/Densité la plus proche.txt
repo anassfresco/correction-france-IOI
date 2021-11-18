@@ -1,0 +1,31 @@
+import sys
+valeurs = []
+def plusProche(cible, posGauche, posDroite):
+   global valeurs
+   valGauche = valeurs[posGauche]
+   valDroite = valeurs[posDroite]
+   if posGauche == posDroite:
+      return valGauche
+   if posGauche + 1 == posDroite:
+      if cible - valGauche <= valDroite - cible:
+         return valGauche
+      else:
+         return valDroite
+   posMilieu = (posGauche + posDroite) // 2
+   if cible <= valeurs[posMilieu]:
+      return plusProche(cible, posGauche, posMilieu)
+   else:
+      return plusProche(cible, posMilieu, posDroite)
+ 
+def main():
+   global valeurs
+   nbValeurs = int(input())
+   valeurs = list(map(int, input().split()))
+ 
+   valeurs.sort()
+  
+   nbRequetes = int(input())
+   for _ in range(nbRequetes):
+      cible = int(sys.stdin.readline())
+      print(plusProche(cible, 0, nbValeurs-1));
+main()
