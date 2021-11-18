@@ -1,0 +1,17 @@
+import sys
+a,b=map(int,input().split())
+value=-sys.maxsize
+list2=[int(i)for i in sys.stdin.readline().split()]
+somme=0
+for i in range(0,len(list2)-a):
+somme=0
+    for j in range(i,i+3):
+    
+    if v>value:
+        value=v
+
+
+
+
+
+print(value)

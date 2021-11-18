@@ -1,0 +1,20 @@
+number=int(input())
+carte=input()
+new_cart=list(carte)
+for i in new_cart:
+    if i==" ":
+        new_cart.remove(i)
+i=0
+while i<len(new_cart)-1:
+    if new_cart[i]=="(" and new_cart[i+1]==")":
+        del(new_cart[i:i+2])
+        i=i-1
+ 
+    elif  i<0:
+         i=i+1
+    else:
+        i=i+1
+if len(new_cart)==0:
+    print(1)
+else:
+    print(0)

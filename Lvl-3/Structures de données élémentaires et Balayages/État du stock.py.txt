@@ -1,0 +1,11 @@
+import sys
+number=input()
+listes=[int(i)  for i in sys.stdin.readline().split()]
+
+
+vendes=int(input())
+for i in range(vendes):
+    a,b=map(int,input().split())
+    listes[a-1]=listes[a-1]+b
+
+print(" ".join(map(str,listes)))

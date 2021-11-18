@@ -1,0 +1,17 @@
+a=int(input())
+list1=[]
+for i  in range(a):
+    a,b=map(int,input().split())
+    if a>0:
+        list1=list1+[b]*a
+
+    if a<0 :
+        j=1
+        while j<=abs(a):
+            del(list1[-1::])
+            j=j+1
+
+
+
+
+print(min(list1))
